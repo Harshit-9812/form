@@ -1,0 +1,88 @@
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: rgba(18, 21, 34, 1);
+    inherits: false;
+  }
+  
+body{
+    margin: 0;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+
+    height: 100vh;
+    width: 100vw;
+}
+.img{
+    flex:1;
+    background-image: url("res/1.jpg");
+}
+.form-wrap{
+    flex:2;
+    background:linear-gradient(0deg, var(--myColor1), var(--myColor1)), url("res/2.jpeg");
+    transition: --myColor1 3s;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    justify-content: center;
+}
+#form{
+    width: 50rem;
+    height: 30rem;
+    display: inline
+}
+.text{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2rem;
+    font-size: 2rem;
+    color: rgb(148, 184, 216);
+    text-align: center;
+}
+.text div{
+    width: 100%;
+    text-align: center;
+    color: rgb(126, 54, 194);
+    padding-top: 2rem;
+    font-size: 3rem;
+}
+input{
+    position: relative;
+    margin-top: 4rem;
+    font-size: 1rem;
+    margin-left: 3.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 30px;
+    padding-right: 5rem;
+    border-radius: 4px;
+    border: none;
+    color: aliceblue;
+    background-color: rgb(43, 50, 80);
+}
+#form button{
+    position: relative;
+    width: 7rem;
+    margin-left: calc(50% - calc(7rem/2));
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+    background: none;
+    border: 2px solid rgb(148, 184, 216);
+    color: rgb(148, 184, 216);
+}
+input:not(:placeholder-shown):not(:focus):invalid {
+    border:1px solid red;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
